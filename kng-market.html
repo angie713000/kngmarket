@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K&amp;G Markets | Authentic Caribbean products &amp; premium quality fruits and vegetables</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --g-dark:   #1B5E20;
+    --g-main:   #2E7D32;
+    --g-mid:    #388E3C;
+    --g-light:  #4CAF50;
+    --g-pale:   #E8F5E9;
+    --g-soft:   #C8E6C9;
+    --o-dark:   #BF360C;
+    --o-main:   #E64A19;
+    --o-light:  #FF6D00;
+    --o-pale:   #FFF3E0;
+    --y-main:   #F9A825;
+    --y-light:  #FFCA28;
+    --red:      #C62828;
+    --text:     #1A1A1A;
+    --text-m:   #555;
+    --text-s:   #888;
+    --border:   #E0E0E0;
+    --bg-page:  #F7F7F7;
+    --white:    #FFFFFF;
+    --font-head: 'Nunito', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: var(--bg-page); font-size: 15px; line-height: 1.5; }
+
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+  img { display: block; max-width: 100%; }
+
+  /* ── TOP BAR ─────────────────────────────────────────────── */
+  .top-bar {
+    background: var(--g-dark);
+    color: #A5D6A7;
+    font-size: 12px;
+    padding: 7px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .top-bar strong { color: #fff; }
+  .top-bar-right { display: flex; gap: 18px; }
+  .top-bar-right a { color: #A5D6A7; transition: color .15s; }
+  .top-bar-right a:hover { color: #fff; }
+
+  /* ── NAV ─────────────────────────────────────────────────── */
+  .nav {
+    background: var(--g-main);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    box-shadow: 0 2px 12px rgba(0,0,0,.18);
+    height: 64px;
+  }
+
+  .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; text-decoration: none; }
+  .logo-mark {
+    width: 46px; height: 46px;
+    background: var(--white);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  }
+  .logo-mark span { font-family: var(--font-head); font-size: 18px; font-weight: 900; color: var(--g-main); letter-spacing: -1px; }
+  .logo-mark span em { color: var(--y-main); font-style: normal; }
+  .logo-text { line-height: 1.1; }
+  .logo-text strong { font-family: var(--font-head); font-size: 17px; font-weight: 900; color: #fff; display: block; }
+  .logo-text small { font-size: 10px; color: var(--g-soft); letter-spacing: .8px; text-transform: uppercase; }
+
+  .nav-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    height: 42px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+  }
+  .nav-search input {
+    flex: 1; border: none; outline: none;
+    padding: 0 18px; font-size: 14px;
+    color: var(--text); font-family: var(--font-body);
+    background: transparent;
+  }
+  .nav-search input::placeholder { color: #aaa; }
+  .nav-search button {
+    background: var(--o-main); color: #fff;
+    border-radius: 0 28px 28px 0;
+    padding: 0 22px; height: 42px;
+    font-size: 14px; font-weight: 700;
+    font-family: var(--font-head);
+    letter-spacing: .2px;
+    transition: background .15s;
+  }
+  .nav-search button:hover { background: var(--o-dark); }
+
+  .nav-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+  .nav-btn {
+    display: flex; align-items: center; gap: 6px;
+    color: #fff; padding: 7px 10px; border-radius: 8px;
+    font-size: 13px; font-weight: 600; font-family: var(--font-body);
+    transition: background .15s; white-space: nowrap;
+  }
+  .nav-btn:hover { background: rgba(255,255,255,.12); }
+  .nav-btn svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  .nav-cart { background: var(--o-main); border-radius: 24px; padding: 7px 16px; position: relative; }
+  .nav-cart:hover { background: var(--o-dark); }
+  .cart-count {
+    position: absolute; top: -4px; right: -4px;
+    background: var(--y-main); color: var(--g-dark);
+    border-radius: 10px; font-size: 10px; font-weight: 800;
+    padding: 1px 5px; line-height: 1.4;
+  }
+
+  /* ── CATEGORY STRIP ──────────────────────────────────────── */
+  .cat-strip {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .cat-strip::-webkit-scrollbar { display: none; }
+  .cat-link {
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    padding: 10px 16px;
+    font-size: 11px; font-weight: 700; font-family: var(--font-head);
+    color: var(--text-m); text-transform: uppercase; letter-spacing: .3px;
+    border-bottom: 3px solid transparent;
+    transition: color .15s, border-color .15s;
+    white-space: nowrap; flex-shrink: 0; text-decoration: none;
+  }
+  .cat-link svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .cat-link:hover, .cat-link.active { color: var(--g-main); border-bottom-color: var(--g-main); }
+
+  /* ── HERO ────────────────────────────────────────────────── */
+  .hero-wrap {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 14px;
+    padding: 16px 32px;
+    background: var(--g-pale);
+  }
+
+  .hero-main {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    background: var(--g-dark);
+    min-height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 36px 40px;
+  }
+  .hero-main::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(27,94,32,.95) 0%, rgba(56,142,60,.75) 60%, rgba(102,187,106,.4) 100%);
+  }
+  .hero-palm {
+    position: absolute; right: 40px; top: 50%; transform: translateY(-50%);
+    font-size: 140px; opacity: .08; line-height: 1; pointer-events: none;
+    user-select: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 440px; }
+  .hero-tag {
+    display: inline-block;
+    background: var(--y-main); color: var(--g-dark);
+    font-family: var(--font-head); font-size: 11px; font-weight: 800;
+    padding: 4px 12px; border-radius: 20px;
+    letter-spacing: .5px; text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .hero-h1 {
+    font-family: var(--font-head);
+    font-size: 38px; font-weight: 900; color: #fff;
+    line-height: 1.08; margin-bottom: 12px;
+    letter-spacing: -.5px;
+  }
+  .hero-h1 span { color: var(--y-light); }
+  .hero-sub { font-size: 15px; color: rgba(255,255,255,.82); line-height: 1.6; margin-bottom: 22px; }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--o-main); color: #fff;
+    font-family: var(--font-head); font-size: 15px; font-weight: 800;
+    padding: 12px 28px; border-radius: 30px;
+    box-shadow: 0 4px 16px rgba(230,74,25,.35);
+    transition: background .15s, transform .1s;
+    text-decoration: none;
+  }
+  .hero-cta:hover { background: var(--o-dark); transform: translateY(-1px); }
+  .hero-cta svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .hero-side { display: flex; flex-direction: column; gap: 12px; }
+  .hero-card {
+    border-radius: 14px; padding: 22px 22px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    min-height: 138px; position: relative; overflow: hidden;
+    text-decoration: none; transition: transform .15s;
+  }
+  .hero-card:hover { transform: translateY(-2px); }
+  .hero-card-deco {
+    position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+    font-size: 68px; opacity: .18; line-height: 1; pointer-events: none; user-select: none;
+  }
+  .hero-card h3 { font-family: var(--font-head); font-size: 16px; font-weight: 900; color: #fff; position: relative; }
+  .hero-card p { font-size: 12px; color: rgba(255,255,255,.8); margin-top: 3px; position: relative; }
+  .hc-1 { background: linear-gradient(135deg, #E65100, #FF8F00); }
+  .hc-2 { background: linear-gradient(135deg, #880E4F, #C2185B); }
+
+  /* ── TRUST BAR ────────────────────────────────────────────── */
+  .trust-bar {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    background: #fff; border-bottom: 1px solid var(--border);
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 24px;
+    border-right: 1px solid var(--border);
+  }
+  .trust-item:last-child { border-right: none; }
+  .trust-icon {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--g-pale); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .trust-icon svg { width: 20px; height: 20px; stroke: var(--g-main); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .trust-label { font-family: var(--font-head); font-size: 13px; font-weight: 800; color: var(--g-dark); }
+  .trust-sub { font-size: 11px; color: var(--text-s); margin-top: 1px; }
+
+  /* ── SHARED SECTION ───────────────────────────────────────── */
+  .sec { padding: 28px 32px; }
+  .sec-bg { background: #fff; }
+  .sec-pale { background: var(--g-pale); }
+  .sec-orange { background: var(--o-pale); }
+
+  .sec-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+  .sec-eye { font-size: 11px; font-weight: 800; color: var(--o-main); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 3px; }
+  .sec-title { font-family: var(--font-head); font-size: 22px; font-weight: 900; color: var(--g-dark); }
+  .sec-more {
+    display: flex; align-items: center; gap: 5px;
+    color: var(--g-main); font-size: 13px; font-weight: 700;
+    font-family: var(--font-head); white-space: nowrap;
+    transition: gap .15s;
+  }
+  .sec-more:hover { gap: 8px; }
+  .sec-more svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; }
+
+  .divider { height: 8px; background: var(--bg-page); }
+
+  /* ── CATEGORY CIRCLES ─────────────────────────────────────── */
+  .cat-circles { display: grid; grid-template-columns: repeat(9, 1fr); gap: 10px; }
+  .cat-circle { text-align: center; text-decoration: none; transition: transform .15s; }
+  .cat-circle:hover { transform: translateY(-3px); }
+  .cat-circle-img {
+    width: 66px; height: 66px; border-radius: 50%;
+    background: var(--g-pale); margin: 0 auto 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; border: 2px solid transparent;
+    transition: border-color .15s, background .15s;
+  }
+  .cat-circle:hover .cat-circle-img { border-color: var(--g-main); background: var(--g-soft); }
+  .cat-circle span { font-size: 11px; color: var(--text); font-weight: 700; font-family: var(--font-head); line-height: 1.2; display: block; }
+
+  /* ── PRODUCT GRID ─────────────────────────────────────────── */
+  .prod-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .prod-grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .prod-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; transition: box-shadow .15s, border-color .15s;
+    cursor: pointer; display: flex; flex-direction: column;
+  }
+  .prod-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.09); border-color: var(--g-light); }
+  .prod-img {
+    background: var(--bg-page); height: 110px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 50px; position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  .prod-badge {
+    position: absolute; top: 8px; left: 8px;
+    background: var(--red); color: #fff;
+    font-size: 9px; font-weight: 800; font-family: var(--font-head);
+    padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .4px;
+  }
+  .prod-badge.new-b { background: var(--g-main); }
+  .prod-body { padding: 10px 12px 12px; flex: 1; display: flex; flex-direction: column; }
+  .prod-name { font-size: 12px; font-weight: 700; font-family: var(--font-head); color: var(--text); line-height: 1.3; margin-bottom: 4px; flex: 1; }
+  .prod-cat { font-size: 10px; color: var(--text-s); margin-bottom: 8px; }
+  .prod-foot { display: flex; align-items: center; justify-content: space-between; }
+  .prod-price { font-size: 16px; font-weight: 900; font-family: var(--font-head); color: var(--g-dark); }
+  .prod-old { font-size: 11px; color: var(--text-s); text-decoration: line-through; margin-left: 4px; font-weight: 400; }
+  .prod-add {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--g-main); color: #fff; font-size: 20px; line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .15s;
+  }
+  .prod-add:hover { background: var(--g-dark); }
+
+  /* ── PROMO BANNERS ────────────────────────────────────────── */
+  .promo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .promo-ban {
+    border-radius: 14px; padding: 26px 30px;
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 128px; position: relative; overflow: hidden;
+    cursor: pointer; transition: transform .15s;
+  }
+  .promo-ban:hover { transform: translateY(-2px); }
+  .promo-deco-emoji {
+    position: absolute; right: 110px; top: 50%; transform: translateY(-50%);
+    font-size: 72px; opacity: .14; line-height: 1; pointer-events: none; user-select: none;
+  }
+  .pb-1 { background: linear-gradient(135deg, #E65100 0%, #FF6D00 100%); }
+  .pb-2 { background: linear-gradient(135deg, #1B5E20 0%, #388E3C 100%); }
+  .promo-ban h3 { font-family: var(--font-head); font-size: 19px; font-weight: 900; color: #fff; line-height: 1.2; }
+  .promo-ban p { font-size: 13px; color: rgba(255,255,255,.82); margin-top: 5px; }
+  .promo-btn-w {
+    background: #fff; border: none; border-radius: 24px;
+    padding: 9px 20px; font-size: 13px; font-weight: 800;
+    font-family: var(--font-head); flex-shrink: 0; cursor: pointer;
+    transition: transform .1s;
+  }
+  .promo-btn-w:hover { transform: scale(1.03); }
+  .pb-1 .promo-btn-w { color: var(--o-dark); }
+  .pb-2 .promo-btn-w { color: var(--g-dark); }
+
+  /* ── DEAL OF THE DAY ──────────────────────────────────────── */
+  .deal-layout { display: grid; grid-template-columns: 230px 1fr; gap: 28px; align-items: start; }
+  .deal-hero-block { text-align: center; }
+  .deal-emoji { font-size: 90px; line-height: 1; }
+  .deal-name { font-family: var(--font-head); font-size: 17px; font-weight: 900; color: var(--o-dark); margin-top: 8px; }
+  .deal-desc { font-size: 12px; color: var(--text-m); margin-top: 4px; line-height: 1.5; }
+  .deal-price { font-family: var(--font-head); font-size: 28px; font-weight: 900; color: var(--o-main); margin: 10px 0; }
+  .deal-cta {
+    display: inline-block; background: var(--o-main); color: #fff;
+    font-family: var(--font-head); font-size: 14px; font-weight: 800;
+    padding: 10px 24px; border-radius: 24px; border: none; cursor: pointer;
+    transition: background .15s;
+  }
+  .deal-cta:hover { background: var(--o-dark); }
+  .deal-timer-label { font-size: 11px; font-weight: 800; color: var(--o-dark); text-transform: uppercase; letter-spacing: .5px; margin: 14px 0 6px; }
+  .deal-timer { display: flex; gap: 6px; justify-content: center; align-items: center; }
+  .t-box { background: var(--o-main); border-radius: 6px; padding: 6px 10px; text-align: center; min-width: 46px; }
+  .t-num { display: block; font-family: var(--font-head); font-size: 20px; font-weight: 900; color: #fff; line-height: 1; }
+  .t-lbl { display: block; font-size: 9px; color: rgba(255,255,255,.75); margin-top: 1px; font-weight: 600; text-transform: uppercase; letter-spacing: .3px; }
+  .t-sep { font-family: var(--font-head); font-size: 22px; font-weight: 900; color: var(--o-main); line-height: 1; }
+
+  /* ── ABOUT BLOCKS ─────────────────────────────────────────── */
+  .about-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .about-card {
+    background: #fff; border-radius: 14px; padding: 28px 24px;
+    border: 1px solid var(--border);
+    transition: box-shadow .15s;
+  }
+  .about-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+  .about-icon { font-size: 40px; margin-bottom: 14px; }
+  .about-card h3 { font-family: var(--font-head); font-size: 16px; font-weight: 900; color: var(--g-dark); margin-bottom: 8px; }
+  .about-card p { font-size: 13px; color: var(--text-m); line-height: 1.65; }
+
+  /* ── RECIPES ──────────────────────────────────────────────── */
+  .recipe-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .recipe-card {
+    background: #fff; border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--border);
+    transition: box-shadow .15s, transform .15s;
+    cursor: pointer;
+  }
+  .recipe-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.09); transform: translateY(-2px); }
+  .recipe-img {
+    background: var(--g-pale); height: 130px;
+    display: flex; align-items: center; justify-content: center; font-size: 56px;
+  }
+  .recipe-body { padding: 14px 16px 18px; }
+  .recipe-tag { font-size: 10px; font-weight: 800; color: var(--o-main); text-transform: uppercase; letter-spacing: .5px; }
+  .recipe-title { font-family: var(--font-head); font-size: 14px; font-weight: 800; color: var(--text); margin-top: 5px; line-height: 1.35; }
+  .recipe-read { font-size: 12px; font-weight: 700; color: var(--g-main); margin-top: 10px; display: flex; align-items: center; gap: 4px; }
+  .recipe-read svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; }
+
+  /* ── APP BANNER ───────────────────────────────────────────── */
+  .app-banner {
+    background: var(--g-dark); color: #fff;
+    border-radius: 16px; margin: 0 32px 28px;
+    padding: 32px 44px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    overflow: hidden; position: relative;
+  }
+  .app-banner::after {
+    content: '📱';
+    position: absolute; right: 180px; top: 50%; transform: translateY(-50%);
+    font-size: 80px; opacity: .1; pointer-events: none;
+  }
+  .app-banner h3 { font-family: var(--font-head); font-size: 24px; font-weight: 900; }
+  .app-banner p { font-size: 14px; color: #A5D6A7; margin-top: 6px; max-width: 360px; line-height: 1.5; }
+  .app-btns { display: flex; gap: 10px; flex-shrink: 0; }
+  .app-btn {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+    color: #fff; border-radius: 10px; padding: 10px 18px;
+    text-decoration: none; transition: background .15s;
+  }
+  .app-btn:hover { background: rgba(255,255,255,.18); }
+  .app-btn svg { width: 24px; height: 24px; stroke: #fff; fill: none; stroke-width: 1.5; }
+  .app-btn-txt { line-height: 1.2; }
+  .app-btn-txt small { font-size: 10px; opacity: .7; display: block; }
+  .app-btn-txt strong { font-family: var(--font-head); font-size: 15px; font-weight: 800; }
+
+  /* ── CONTACT BAR ──────────────────────────────────────────── */
+  .contact-bar {
+    background: var(--g-pale); border-top: 1px solid var(--g-soft);
+    border-bottom: 1px solid var(--g-soft);
+    padding: 18px 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    font-size: 13px;
+  }
+  .contact-bar strong { color: var(--g-dark); font-family: var(--font-head); font-weight: 800; }
+  .contact-bar a { color: var(--g-main); font-weight: 700; }
+  .contact-social { display: flex; gap: 8px; }
+  .soc-btn {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--g-main); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 14px; transition: background .15s;
+  }
+  .soc-btn:hover { background: var(--g-dark); }
+  .soc-btn svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ── FOOTER ───────────────────────────────────────────────── */
+  footer { background: #111; color: #888; }
+  .footer-main { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.2fr; gap: 40px; padding: 44px 32px 36px; }
+  .footer-logo { font-family: var(--font-head); font-size: 24px; font-weight: 900; color: #fff; margin-bottom: 12px; }
+  .footer-logo em { color: var(--y-main); font-style: normal; }
+  .footer-desc { font-size: 13px; line-height: 1.7; margin-bottom: 18px; }
+  .foot-social { display: flex; gap: 8px; margin-bottom: 20px; }
+  .foot-soc {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: #222; display: flex; align-items: center; justify-content: center;
+    color: #aaa; text-decoration: none; transition: background .15s, color .15s;
+  }
+  .foot-soc:hover { background: var(--g-main); color: #fff; }
+  .foot-soc svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .pay-label { font-size: 11px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+  .pay-cards { font-size: 12px; color: #444; }
+
+  .footer-col h4 { font-family: var(--font-head); font-size: 13px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 13px; color: #777; margin-bottom: 9px; text-decoration: none; transition: color .15s; }
+  .footer-col a:hover { color: #fff; }
+
+  .footer-addr { font-size: 13px; line-height: 1.9; }
+  .addr-item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
+  .addr-item svg { width: 16px; height: 16px; stroke: var(--g-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 2px; }
+  .addr-item a { color: #aaa; text-decoration: none; }
+  .addr-item a:hover { color: #fff; }
+
+  .footer-bottom {
+    border-top: 1px solid #222;
+    padding: 16px 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px;
+  }
+  .footer-bottom a { color: #555; text-decoration: none; margin-left: 20px; transition: color .15s; }
+  .footer-bottom a:hover { color: #fff; }
+
+  /* ── MAP SECTION ──────────────────────────────────────────── */
+  .map-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); height: 240px; background: var(--bg-page); display: flex; align-items: center; justify-content: center; }
+  .map-wrap iframe { width: 100%; height: 100%; border: 0; }
+
+  /* ── TRENDING TAGS ────────────────────────────────────────── */
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag-pill {
+    background: var(--g-pale); color: var(--g-dark);
+    font-size: 11px; font-weight: 700; font-family: var(--font-head);
+    padding: 5px 12px; border-radius: 20px;
+    border: 1px solid var(--g-soft); cursor: pointer;
+    transition: background .15s, color .15s; text-decoration: none;
+  }
+  .tag-pill:hover { background: var(--g-main); color: #fff; border-color: var(--g-main); }
+
+  /* ── RESPONSIVE ───────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .hero-wrap { grid-template-columns: 1fr; }
+    .hero-side { flex-direction: row; }
+    .hero-card { flex: 1; }
+    .cat-circles { grid-template-columns: repeat(5,1fr); }
+    .prod-grid { grid-template-columns: repeat(3,1fr); }
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 28px; }
+  }
+  @media (max-width: 768px) {
+    .top-bar { display: none; }
+    .nav { padding: 0 16px; }
+    .hero-wrap { padding: 12px 16px; }
+    .sec { padding: 20px 16px; }
+    .trust-bar { grid-template-columns: 1fr 1fr; }
+    .prod-grid { grid-template-columns: repeat(2,1fr); }
+    .promo-row { grid-template-columns: 1fr; }
+    .deal-layout { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .recipe-grid { grid-template-columns: 1fr 1fr; }
+    .app-banner { padding: 24px; flex-direction: column; align-items: flex-start; margin: 0 16px 20px; }
+    .footer-main { grid-template-columns: 1fr; padding: 28px 16px; }
+    .footer-bottom { flex-direction: column; gap: 10px; }
+    .contact-bar { flex-direction: column; align-items: flex-start; }
+    .cat-circles { grid-template-columns: repeat(4,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div>
+    <strong>📍 9420 Church Ave, Brooklyn, NY 11212</strong>
+    &nbsp;·&nbsp; Mon–Sat: 7:30am – 8:00pm &nbsp;·&nbsp; Sunday: 7:30am – 6:30pm
+  </div>
+  <div class="top-bar-right">
+    <a href="tel:+13473659656">📞 +1 (347) 365-9656</a>
+    <a href="mailto:support@example.com">support@example.com</a>
+    <a href="#">Order tracking</a>
+    <a href="#">Help</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="logo" href="#">
+    <div class="logo-mark"><span>K<em>&</em>G</span></div>
+    <div class="logo-text">
+      <strong>K&amp;G Market</strong>
+      <small>Caribbean &amp; Fresh Produce</small>
+    </div>
+  </a>
+
+  <div class="nav-search">
+    <input type="text" placeholder="Search fruits, vegetables, Caribbean products…">
+    <button>
+      <svg viewBox="0 0 24 24" style="display:inline;vertical-align:middle;width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;margin-right:5px"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Search
+    </button>
+  </div>
+
+  <div class="nav-actions">
+    <a class="nav-btn" href="#">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Brooklyn, NY
+    </a>
+    <a class="nav-btn" href="#">
+      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Sign in
+    </a>
+    <a class="nav-btn nav-cart" href="https://kngmarket.com/cart/">
+      <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      Cart
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</nav>
+
+<!-- CATEGORY STRIP -->
+<div class="cat-strip">
+  <a class="cat-link active" href="#">
+    <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Home
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/produce/">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10A10 10 0 0 1 2 12C2 6.48 6.48 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+    Produce
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/meat-and-seafood/">
+    <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+    Meat &amp; Seafood
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/beverages/">
+    <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+    Beverages
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/canned-goods-and-soups/">
+    <svg viewBox="0 0 24 24"><path d="M3 3h18v4H3z"/><path d="M3 7v13a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7"/><path d="M12 12v4"/><path d="M10 12h4"/></svg>
+    Canned Goods
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/condiments-and-sauces/">
+    <svg viewBox="0 0 24 24"><path d="M3 2h18v4H3z"/><path d="M3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6"/><path d="M8 10h8"/></svg>
+    Condiments
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/frozen/">
+    <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="m17 7-5-5-5 5"/><path d="m17 17-5 5-5-5"/><line x1="2" y1="12" x2="22" y2="12"/><path d="m7 7-5 5 5 5"/><path d="m17 7 5 5-5 5"/></svg>
+    Frozen Foods
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/dairy-and-eggs/">
+    <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+    Dairy &amp; Eggs
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/snacks-and-candy/">
+    <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+    Snacks
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/categoria-producto/dry-goods-and-pasta/">
+    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    Dry Goods
+  </a>
+  <a class="cat-link" href="https://kngmarket.com/shop/">
+    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    All categories
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero-wrap">
+  <div class="hero-main">
+    <div class="hero-palm">🌴</div>
+    <div class="hero-content">
+      <span class="hero-tag">✨ Quality, freshness &amp; authenticity</span>
+      <h1 class="hero-h1">Authentic <span>Caribbean</span><br>flavors, delivered<br>to your door</h1>
+      <p class="hero-sub">
+        At K&amp;G Market you'll find a wide variety of tropical fruits and vegetables —
+        delicious mangoes, juicy pineapples, vibrant plantains, flavorful yams, and aromatic spices.
+      </p>
+      <a href="https://kngmarket.com/shop/" class="hero-cta">
+        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Shop now
+      </a>
+    </div>
+  </div>
+  <div class="hero-side">
+    <a href="https://kngmarket.com/categoria-producto/produce/" class="hero-card hc-1">
+      <div class="hero-card-deco">🥭</div>
+      <h3>Tropical Fruits</h3>
+      <p>Mangoes, pineapples, plantains &amp; more</p>
+    </a>
+    <a href="https://kngmarket.com/categoria-producto/canned-goods-and-soups/" class="hero-card hc-2">
+      <div class="hero-card-deco">🛒</div>
+      <h3>Weekly deals</h3>
+      <p>Save on Caribbean staples this week</p>
+    </a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+    <div><div class="trust-label">Fast delivery</div><div class="trust-sub">In-store pickup in 2 hours</div></div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <div><div class="trust-label">Safe payment</div><div class="trust-sub">100% secure payment</div></div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+    <div><div class="trust-label">Online discount</div><div class="trust-sub">Multi-buy discount available</div></div>
+  </div>
+  <div class="trust-item">
+    <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+    <div><div class="trust-label">Help center</div><div class="trust-sub">Dedicated 24/7 support</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section class="sec sec-bg">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">Who we are</div>
+      <div class="sec-title">Our story &amp; values</div>
+    </div>
+  </div>
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="about-icon">🥦</div>
+      <h3>Our Products</h3>
+      <p>We offer a fresh and diverse selection of fruits and vegetables, with a special focus on authentic West Indian produce. Quality, flavor, and freshness in every item.</p>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">🌴</div>
+      <h3>Who We Are</h3>
+      <p>We are a local market committed to bringing the vibrant tastes of the West Indies to our community. Fresh, authentic, and carefully sourced — that's who we are.</p>
+    </div>
+    <div class="about-card">
+      <div class="about-icon">🤝</div>
+      <h3>How We Work</h3>
+      <p>We hand-select every product to ensure exceptional freshness and quality. From trusted growers to your home, we deliver flavor you can trust.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BROWSE BY CATEGORY -->
+<section class="sec sec-pale">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">Browse</div>
+      <div class="sec-title">Shop by category</div>
+    </div>
+    <a class="sec-more" href="https://kngmarket.com/shop/">
+      View all
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <div class="cat-circles">
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/produce/">
+      <div class="cat-circle-img">🥭</div><span>Produce</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/meat-and-seafood/">
+      <div class="cat-circle-img">🥩</div><span>Meat &amp; Seafood</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/beverages/">
+      <div class="cat-circle-img">🥤</div><span>Beverages</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/canned-goods-and-soups/">
+      <div class="cat-circle-img">🥫</div><span>Canned Goods</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/condiments-and-sauces/">
+      <div class="cat-circle-img">🧂</div><span>Condiments</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/frozen/">
+      <div class="cat-circle-img">🧊</div><span>Frozen Foods</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/dairy-and-eggs/">
+      <div class="cat-circle-img">🧀</div><span>Dairy &amp; Eggs</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/snacks-and-candy/">
+      <div class="cat-circle-img">🍪</div><span>Snacks &amp; Candy</span>
+    </a>
+    <a class="cat-circle" href="https://kngmarket.com/categoria-producto/dry-goods-and-pasta/">
+      <div class="cat-circle-img">🌾</div><span>Dry Goods &amp; Pasta</span>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHAT'S HOT -->
+<section class="sec sec-bg">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">🔥 Trending now</div>
+      <div class="sec-title">What's Hot Items</div>
+    </div>
+    <a class="sec-more" href="https://kngmarket.com/shop/">
+      View all products
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <div class="prod-grid">
+    <div class="prod-card">
+      <div class="prod-img">
+        <span class="prod-badge new-b">NEW</span>🐉
+      </div>
+      <div class="prod-body">
+        <div class="prod-name">Fresh Organic Dragon Fruit Vietnam</div>
+        <div class="prod-cat">🇻🇳 Fresh Produce</div>
+        <div class="prod-foot">
+          <span><span class="prod-price">$33.00</span></span>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🍫</div>
+      <div class="prod-body">
+        <div class="prod-name">Fresh Milk Chocolate Quaker Popped Rice Crisps</div>
+        <div class="prod-cat">🍪 Snacks</div>
+        <div class="prod-foot">
+          <span><span class="prod-price">$34.00</span></span>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🍋</div>
+      <div class="prod-body">
+        <div class="prod-name">Fresh And Sour Lemon Like An Old Lover</div>
+        <div class="prod-cat">🌿 Fresh Produce</div>
+        <div class="prod-foot">
+          <span><span class="prod-price">$33.00</span></span>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🍓</div>
+      <div class="prod-body">
+        <div class="prod-name">Beautiful Skin Strawberry Good For Health 1Kg</div>
+        <div class="prod-cat">🌿 Fresh Produce</div>
+        <div class="prod-foot">
+          <span><span class="prod-price">$44.00</span></span>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">
+        <span class="prod-badge">SALE</span>🧅
+      </div>
+      <div class="prod-body">
+        <div class="prod-name">1kg Purple Onion Dried Onion Kinh Men</div>
+        <div class="prod-cat">🌿 Dry Goods</div>
+        <div class="prod-foot">
+          <span><span class="prod-price">$18.00</span><span class="prod-old">$19.00</span></span>
+          <button class="prod-add">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:22px">
+    <a href="https://kngmarket.com/shop/" style="display:inline-flex;align-items:center;gap:6px;color:var(--g-main);font-weight:800;font-family:var(--font-head);font-size:14px;border:2px solid var(--g-main);padding:10px 28px;border-radius:28px;transition:background .15s,color .15s;" onmouseover="this.style.background='var(--g-main)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--g-main)'">
+      Discover thousands of other quality products &nbsp;↪
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROMO BANNERS -->
+<section class="sec sec-pale">
+  <div class="promo-row">
+    <div class="promo-ban pb-1">
+      <div class="promo-deco-emoji">🥭</div>
+      <div class="promo-text">
+        <h3>Tropical Fruits<br>up to 30% off</h3>
+        <p>Mangoes, pineapples, plantains &amp; more</p>
+      </div>
+      <button class="promo-btn-w" onclick="window.location='https://kngmarket.com/categoria-producto/produce/'">Shop now</button>
+    </div>
+    <div class="promo-ban pb-2">
+      <div class="promo-deco-emoji">🌴</div>
+      <div class="promo-text">
+        <h3>West Indies<br>Produce Selection</h3>
+        <p>Authentic Caribbean flavors at your table</p>
+      </div>
+      <button class="promo-btn-w" onclick="window.location='https://kngmarket.com/shop/'">Explore</button>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DEAL OF THE DAY -->
+<section class="sec sec-orange">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">⏰ Limited time</div>
+      <div class="sec-title">Deals Of The Day</div>
+    </div>
+  </div>
+  <div class="deal-layout">
+    <div class="deal-hero-block">
+      <div class="deal-emoji">🥤</div>
+      <div class="deal-name">Organic Drinks<br>Easy Healthy – Happy Life</div>
+      <div class="deal-desc">Fresh, organic, and delicious — the best for your daily routine.</div>
+      <div class="deal-price">$54.00</div>
+      <button class="deal-cta">Add to cart</button>
+      <div class="deal-timer-label">Hurry up! Offer ends in:</div>
+      <div class="deal-timer">
+        <div class="t-box"><span class="t-num" id="dh">04</span><span class="t-lbl">hrs</span></div>
+        <span class="t-sep">:</span>
+        <div class="t-box"><span class="t-num" id="dm">23</span><span class="t-lbl">min</span></div>
+        <span class="t-sep">:</span>
+        <div class="t-box"><span class="t-num" id="ds">59</span><span class="t-lbl">sec</span></div>
+      </div>
+    </div>
+    <div class="prod-grid prod-grid-4">
+      <div class="prod-card">
+        <div class="prod-img">🥔</div>
+        <div class="prod-body">
+          <div class="prod-name">POTATO – WEST INDIAN (BATATA)</div>
+          <div class="prod-cat">🌴 Caribbean Produce</div>
+          <div class="prod-foot"><span class="prod-price">$1.99</span><button class="prod-add">+</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">🫛</div>
+        <div class="prod-body">
+          <div class="prod-name">GOYA Bag of Whole Green Peas</div>
+          <div class="prod-cat">🥫 Canned Goods</div>
+          <div class="prod-foot"><span class="prod-price">—</span><button class="prod-add">+</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">🫘</div>
+        <div class="prod-body">
+          <div class="prod-name">Goya Lentils (Lentejas)</div>
+          <div class="prod-cat">🥫 Canned Goods</div>
+          <div class="prod-foot"><span class="prod-price">$1.99</span><button class="prod-add">+</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">🫘</div>
+        <div class="prod-body">
+          <div class="prod-name">Roman Bean – Habichuelas Romanas</div>
+          <div class="prod-cat">🥫 Canned Goods</div>
+          <div class="prod-foot"><span class="prod-price">$2.59</span><button class="prod-add">+</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">🫘</div>
+        <div class="prod-body">
+          <div class="prod-name">Red Kidney Beans – Habichuelas Coloradas</div>
+          <div class="prod-cat">🥫 Canned Goods</div>
+          <div class="prod-foot"><span class="prod-price">$2.99</span><button class="prod-add">+</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">🫛</div>
+        <div class="prod-body">
+          <div class="prod-name">Pigeon Peas – Gandules</div>
+          <div class="prod-cat">🥫 Canned Goods</div>
+          <div class="prod-foot"><span class="prod-price">$2.99</span><button class="prod-add">+</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img">🍗</div>
+        <div class="prod-body">
+          <div class="prod-name">Foster Farms Takeout Crispy Classic</div>
+          <div class="prod-cat">🧊 Frozen Foods</div>
+          <div class="prod-foot"><span class="prod-price">$55.00</span><button class="prod-add">+</button></div>
+        </div>
+      </div>
+      <a href="https://kngmarket.com/shop/" class="prod-card" style="text-decoration:none;background:var(--g-pale);border:2px dashed var(--g-soft);display:flex;align-items:center;justify-content:center;">
+        <div style="text-align:center;padding:16px">
+          <div style="font-size:28px">🛒</div>
+          <div style="font-size:13px;font-weight:800;font-family:var(--font-head);color:var(--g-dark);margin-top:6px">Shop All<br>Products ↪</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- THIS WEEK'S HIGHLIGHTS -->
+<section class="sec sec-bg">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">⭐ Best products</div>
+      <div class="sec-title">This Week's Highlights</div>
+    </div>
+    <a class="sec-more" href="https://kngmarket.com/shop/">
+      View all
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <div class="prod-grid">
+    <div class="prod-card">
+      <div class="prod-img">🐉</div>
+      <div class="prod-body">
+        <div class="prod-name">Fresh Organic Dragon Fruit Vietnam</div>
+        <div class="prod-cat">🌿 Fresh Produce</div>
+        <div class="prod-foot"><span class="prod-price">$33.00</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🍫</div>
+      <div class="prod-body">
+        <div class="prod-name">Fresh Milk Chocolate Quaker Popped Rice Crisps</div>
+        <div class="prod-cat">🍪 Snacks</div>
+        <div class="prod-foot"><span class="prod-price">$34.00</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🍋</div>
+      <div class="prod-body">
+        <div class="prod-name">Fresh And Sour Lemon Like An Old Lover</div>
+        <div class="prod-cat">🌿 Fresh Produce</div>
+        <div class="prod-foot"><span class="prod-price">$33.00</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🍓</div>
+      <div class="prod-body">
+        <div class="prod-name">Beautiful Skin Strawberry Good For Health 1Kg</div>
+        <div class="prod-cat">🌿 Fresh Produce</div>
+        <div class="prod-foot"><span class="prod-price">$44.00</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img"><span class="prod-badge">SALE</span>🧅</div>
+      <div class="prod-body">
+        <div class="prod-name">1kg Purple Onion Dried Onion Kinh Men</div>
+        <div class="prod-cat">🌿 Dry Goods</div>
+        <div class="prod-foot"><span><span class="prod-price">$18.00</span><span class="prod-old">$19.00</span></span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🍗</div>
+      <div class="prod-body">
+        <div class="prod-name">Foster Farms Takeout Crispy Classic</div>
+        <div class="prod-cat">🧊 Frozen Foods</div>
+        <div class="prod-foot"><span class="prod-price">$55.00</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🥔</div>
+      <div class="prod-body">
+        <div class="prod-name">POTATO – WEST INDIAN (BATATA)</div>
+        <div class="prod-cat">🌴 Caribbean Produce</div>
+        <div class="prod-foot"><span class="prod-price">$1.99</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🫛</div>
+      <div class="prod-body">
+        <div class="prod-name">GOYA Bag of Whole Green Peas</div>
+        <div class="prod-cat">🥫 Canned Goods</div>
+        <div class="prod-foot"><span class="prod-price">—</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🫘</div>
+      <div class="prod-body">
+        <div class="prod-name">Goya Lentils (Lentejas)</div>
+        <div class="prod-cat">🥫 Canned Goods</div>
+        <div class="prod-foot"><span class="prod-price">$1.99</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🫘</div>
+      <div class="prod-body">
+        <div class="prod-name">Roman Bean – Habichuelas Romanas</div>
+        <div class="prod-cat">🥫 Canned Goods</div>
+        <div class="prod-foot"><span class="prod-price">$2.59</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🫘</div>
+      <div class="prod-body">
+        <div class="prod-name">Red Kidney Beans – Habichuelas Coloradas</div>
+        <div class="prod-cat">🥫 Canned Goods</div>
+        <div class="prod-foot"><span class="prod-price">$2.99</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img">🫛</div>
+      <div class="prod-body">
+        <div class="prod-name">Pigeon Peas – Gandules</div>
+        <div class="prod-cat">🥫 Canned Goods</div>
+        <div class="prod-foot"><span class="prod-price">$2.99</span><button class="prod-add">+</button></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:22px">
+    <a href="https://kngmarket.com/shop/" style="display:inline-flex;align-items:center;gap:6px;color:var(--g-main);font-weight:800;font-family:var(--font-head);font-size:14px;border:2px solid var(--g-main);padding:10px 28px;border-radius:28px;transition:background .15s,color .15s;" onmouseover="this.style.background='var(--g-main)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--g-main)'">
+      Discover thousands of other quality products &nbsp;↪
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RECIPES / BLOG -->
+<section class="sec sec-pale">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">From our kitchen</div>
+      <div class="sec-title">Our Latest Recipes</div>
+    </div>
+    <a class="sec-more" href="#">
+      Read our blog
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+  <div class="recipe-grid">
+    <div class="recipe-card">
+      <div class="recipe-img">🥗</div>
+      <div class="recipe-body">
+        <div class="recipe-tag">Seasonal</div>
+        <div class="recipe-title">Transition Your Favorite Looks into Fall France</div>
+        <div class="recipe-read">Continue Reading
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="recipe-img">🍱</div>
+      <div class="recipe-body">
+        <div class="recipe-tag">Family</div>
+        <div class="recipe-title">Perfect Quality Reasonable Price For Your Family</div>
+        <div class="recipe-read">Continue Reading
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <div class="recipe-img">🐟</div>
+      <div class="recipe-body">
+        <div class="recipe-tag">Health</div>
+        <div class="recipe-title">Ways To Choose Fruits &amp; Seafoods Good For Pregnancy</div>
+        <div class="recipe-read">Continue Reading
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MAP + CONTACT -->
+<section class="sec sec-bg">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">Visit us in Brooklyn</div>
+      <div class="sec-title">Find our store</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:start">
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.0!2d-73.9163!3d40.6549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25de934159bbb%3A0xb9ee5114b095776b!2s9420%20Church%20Ave%2C%20Brooklyn%2C%20NY%2011212!5e0!3m2!1sen!2sus!4v1700000000000"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="K&G Market location map">
+      </iframe>
+    </div>
+    <div style="background:var(--g-pale);border-radius:14px;padding:24px;border:1px solid var(--g-soft)">
+      <h3 style="font-family:var(--font-head);font-size:17px;font-weight:900;color:var(--g-dark);margin-bottom:16px">Contact us</h3>
+      <div style="font-size:13px;color:var(--text-m);line-height:2">
+        <div>📍 <strong style="color:var(--text)">9420 Church Ave</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brooklyn, NY 11212</div>
+        <div style="margin-top:10px">🕐 <strong style="color:var(--text)">Mon – Sat:</strong> 7:30 am – 8:00 pm</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color:var(--text)">Sunday:</strong> 7:30 am – 6:30 pm</div>
+        <div style="margin-top:10px">📞 <a href="tel:+13473659656" style="color:var(--g-main);font-weight:700">+1 (347) 365-9656</a></div>
+        <div style="margin-top:6px">✉️ <a href="mailto:support@example.com" style="color:var(--g-main);font-weight:700">support@example.com</a></div>
+      </div>
+      <div style="margin-top:16px">
+        <div style="font-size:11px;font-weight:800;color:var(--g-dark);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Social media</div>
+        <div style="display:flex;gap:8px">
+          <a href="#" title="TikTok" class="soc-btn" style="width:34px;height:34px;border-radius:50%;background:var(--g-main);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;text-decoration:none;">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+          <a href="#" title="Instagram" class="soc-btn" style="width:34px;height:34px;border-radius:50%;background:var(--g-main);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;text-decoration:none;">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- APP BANNER -->
+<div class="app-banner">
+  <div>
+    <h3>Shop smarter with the K&amp;G Market app</h3>
+    <p>Order ahead, track your pickup, get exclusive app-only deals and never miss a fresh arrival.</p>
+  </div>
+  <div class="app-btns">
+    <a href="#" class="app-btn">
+      <svg viewBox="0 0 24 24"><path d="M12 2a5.27 5.27 0 0 1 3.63 1.37A5.45 5.45 0 0 1 17 7h-2a3.45 3.45 0 0 0-3-3.5A3.45 3.45 0 0 0 9 7H7a5.45 5.45 0 0 1 1.37-3.63A5.27 5.27 0 0 1 12 2z"/><rect x="5" y="7" width="14" height="15" rx="2"/></svg>
+      <div class="app-btn-txt"><small>Download on the</small><strong>App Store</strong></div>
+    </a>
+    <a href="#" class="app-btn">
+      <svg viewBox="0 0 24 24"><path d="M3 3l18 9-18 9V3z"/></svg>
+      <div class="app-btn-txt"><small>Get it on</small><strong>Google Play</strong></div>
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div>
+      <div class="footer-logo">K<em>&</em>G <span style="color:#aaa;font-size:18px;font-weight:400">Market</span></div>
+      <p class="footer-desc">Authentic Caribbean products &amp; premium quality fruits and vegetables. Your neighborhood market in Brooklyn, bringing the vibrant tastes of the West Indies to our community.</p>
+      <div class="foot-social">
+        <a href="#" class="foot-soc" title="TikTok"><svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+        <a href="#" class="foot-soc" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" class="foot-soc" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+      <div class="pay-label">We accept</div>
+      <div class="pay-cards">Visa · Mastercard · Amex · PayPal · Cash in store</div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="https://kngmarket.com/categoria-producto/beverages/">Beverages</a>
+      <a href="https://kngmarket.com/categoria-producto/canned-goods-and-soups/">Canned Goods &amp; Soups</a>
+      <a href="https://kngmarket.com/categoria-producto/condiments-and-sauces/">Condiments &amp; Sauces</a>
+      <a href="https://kngmarket.com/categoria-producto/dairy-and-eggs/">Dairy, Cheese &amp; Eggs</a>
+      <a href="https://kngmarket.com/categoria-producto/dry-goods-and-pasta/">Dry Goods &amp; Pasta</a>
+      <a href="https://kngmarket.com/categoria-producto/frozen/">Frozen Foods</a>
+      <a href="https://kngmarket.com/categoria-producto/meat-and-seafood/">Meat &amp; Seafood</a>
+      <a href="https://kngmarket.com/categoria-producto/produce/">Produce</a>
+      <a href="https://kngmarket.com/categoria-producto/snacks-and-candy/">Snacks Foods</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Information</h4>
+      <a href="#">About Us</a>
+      <a href="#">Shipping &amp; Returns Policy</a>
+      <a href="https://kngmarket.com/privacy-policy/">Privacy Policy</a>
+      <a href="https://kngmarket.com/terms-of-use/">Terms of Use</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Where are we?</h4>
+      <div class="footer-addr">
+        <div class="addr-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>9420 Church Ave, Brooklyn, NY 11212, Estados Unidos</span>
+        </div>
+        <div class="addr-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>
+            <strong style="color:#ccc">Lunes – sábado:</strong> 7:30 am – 8:00 pm<br>
+            <strong style="color:#ccc">Domingo:</strong> 7:30 am – 6:30 pm
+          </span>
+        </div>
+        <div class="addr-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.89-1.89a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+13473659656">+1 (347) 365-9656</a>
+        </div>
+        <div class="addr-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:support@example.com">support@example.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>Todos los derechos reservados 2026 — K&amp;G Market</span>
+    <div>
+      <a href="https://kngmarket.com/terms-of-use/">Terms Of Use</a>
+      <a href="https://kngmarket.com/privacy-policy/">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Countdown timer
+  let total = 4 * 3600 + 23 * 60 + 59;
+  function tick() {
+    if (total <= 0) return;
+    total--;
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    const dh = document.getElementById('dh');
+    const dm = document.getElementById('dm');
+    const ds = document.getElementById('ds');
+    if (dh) dh.textContent = String(h).padStart(2, '0');
+    if (dm) dm.textContent = String(m).padStart(2, '0');
+    if (ds) ds.textContent = String(s).padStart(2, '0');
+  }
+  setInterval(tick, 1000);
+
+  // Cart add buttons feedback
+  document.querySelectorAll('.prod-add').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const orig = this.textContent;
+      this.textContent = '✓';
+      this.style.background = 'var(--g-dark)';
+      setTimeout(() => {
+        this.textContent = orig;
+        this.style.background = '';
+      }, 900);
+    });
+  });
+
+  // Smooth active cat-link
+  document.querySelectorAll('.cat-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
